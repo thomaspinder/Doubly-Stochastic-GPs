@@ -26,7 +26,7 @@ from gpflow.models.gplvm import BayesianGPLVM
 from gpflow.expectations import expectation
 from gpflow.probability_distributions import DiagonalGaussian
 from gpflow import params_as_tensors
-from gpflow.logdensities import multivariate_normal
+from gpflow.densities import multivariate_normal
 
 
 
