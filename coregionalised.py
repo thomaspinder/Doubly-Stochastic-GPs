@@ -19,6 +19,8 @@ if __name__ == "__main__":
     cams = pd.read_csv('demos/coregional_data/cams_3days.csv')
     cams = cams[['date', 'lat', 'lon', 'val']]
 
+    mind = aurn.Date.drop_duplicates().tolist()[0]
+
     aurn = aurn[['Date', 'Latitude', 'Longitude', 'pm25_value']]
     aurn.columns = ['date', 'lat', 'lon', 'val']
 
@@ -32,6 +34,7 @@ if __name__ == "__main__":
         0] == aurn.shape[0] + cams.shape[0], "Rows lost in concatenation"
     assert all_data.shape[1] == aurn.shape[1] == cams.shape[
         1], "Column count mismatch in data"
+    all_data = all_data.head(n=int(all_data.shape[0]/2))
 
     print('{} observations loaded.'.format(all_data.shape[0]))
     print(all_data.head())
