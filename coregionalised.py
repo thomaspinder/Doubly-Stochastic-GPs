@@ -110,4 +110,7 @@ if __name__ == "__main__":
     fname = 'demos/corregionalised_gp_results.csv'
     results.to_csv(fname, index=False)
 
+    saver= gpflow.saver.Saver()
+    saver.save('coreg_model.gpflow', m)
+
   # results['sq_error'].groupby(results.indicator).describe()
