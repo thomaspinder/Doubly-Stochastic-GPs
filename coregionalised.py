@@ -39,9 +39,9 @@ if __name__ == "__main__":
     print('{} observations loaded.'.format(all_data.shape[0]))
     print(all_data.head())
     # Transform Data
-    
+
     all_data.val = np.log(all_data.val)
-    
+
     # Split Data""
     X_aug = all_data[['date', 'lat', 'lon', 'indicator']].values
     y_aug = all_data[['val', 'indicator']].values
@@ -50,7 +50,7 @@ if __name__ == "__main__":
                                                         y_aug,
                                                         test_size=0.4,
                                                         random_state=42)
-    
+
     # Fit GP
     output_dim = 2
 
@@ -64,21 +64,21 @@ if __name__ == "__main__":
     rank = 1
 
     # Base Kernel
-    k1 = gpflow.kernels.RBF(input_dim=3, active_dims=[0, 1, 2], ARD=True)
-
+    k1 = gpflow.kernels.RBF(input_dim=2, active_dims=[0, 1], ARD=True)
+    k3 = gpflow.kernels.RBF(input_dim = 1, active_dims =[2])
     # Coregeionalised kernel
     k2 = gpflow.kernels.Coregion(1, output_dim=output_dim, rank=rank, active_dims=[int(coreg_dim)])
 
     # Initialise W
     k2.W = np.random.randn(output_dim, rank)
     # Combine
-    kern = k1 * k2
+    kern = k1 * k3 * k2
 
     # Define Likelihoods
     liks = gpflow.likelihoods.SwitchedLikelihood(
         [gpflow.likelihoods.Gaussian(),
         gpflow.likelihoods.Gaussian()])
-    
+
     # Variational GP
     m = gpflow.models.VGP(X_train,
                           y_train,
@@ -86,12 +86,12 @@ if __name__ == "__main__":
                           likelihood=liks,
                           num_latent=1)
     gpflow.train.ScipyOptimizer().minimize(m, maxiter=1000)
-    
+
     """# Visualise the B Matrix"""
     B = k2.W.value @ k2.W.value.T + np.diag(k2.kappa.value)
     print('B =', B)
     plt.imshow(B)
-    
+
     """## Predictions"""
 
     mu, var = m.predict_f(X_train)
