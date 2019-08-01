@@ -27,14 +27,13 @@ if __name__ == "__main__":
     aurn = pd.read_csv('demos/coregional_data/aurn_{}.csv'.format(data_name))
     cams = pd.read_csv('demos/coregional_data/cams_{}.csv'.format(data_name)) # Get full CAMS data.
     cams = cams[['date', 'lat', 'lon', 'val']]
-    cams = cams.head(n=350)
 
     mind = aurn.Date.drop_duplicates().tolist()[0]
 
     aurn = aurn[['Date', 'Latitude', 'Longitude', 'pm25_value']]
     aurn.columns = ['date', 'lat', 'lon', 'val']
 
-    n_sparse = 300
+    n_sparse = 1200
     if n_sparse:
         zpoints = kmeans2(cams[['date', 'lat', 'lon']].values, n_sparse, minit='points')[0]
         zpoints = np.vstack((zpoints, aurn[['date', 'lat', 'lon']].values))
