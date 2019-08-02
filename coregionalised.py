@@ -27,7 +27,7 @@ if __name__ == "__main__":
     aurn = pd.read_csv('demos/coregional_data/aurn_{}.csv'.format(data_name))
     cams = pd.read_csv('demos/coregional_data/cams_{}.csv'.format(data_name)) # Get full CAMS data.
     cams = cams[['date', 'lat', 'lon', 'val']]
-
+    print(cams.date.drop_duplicates())
     mind = aurn.Date.drop_duplicates().tolist()[0]
 
     aurn = aurn[['Date', 'Latitude', 'Longitude', 'pm25_value']]
