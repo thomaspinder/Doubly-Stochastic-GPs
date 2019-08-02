@@ -9,6 +9,7 @@ from scipy.cluster.vq import kmeans2
 from sklearn.model_selection import train_test_split
 import string
 import random
+from itertools import product
 tf.logging.set_verbosity(0)
 device_name = tf.test.gpu_device_name()
 if device_name != '/device:GPU:0':
@@ -33,7 +34,7 @@ if __name__ == "__main__":
     aurn = aurn[['Date', 'Latitude', 'Longitude', 'pm25_value']]
     aurn.columns = ['date', 'lat', 'lon', 'val']
 
-    n_sparse = 4000
+    n_sparse = 350
     if n_sparse:
         zpoints = kmeans2(cams[['date', 'lat', 'lon']].values, n_sparse, minit='points')[0]
         zpoints = np.vstack((zpoints, aurn[['date', 'lat', 'lon']].values))
@@ -142,5 +143,34 @@ if __name__ == "__main__":
         tempname = id_generator()
         print("Filename coreg_model.gpflow already exists. \nSaving model as {}.gpflow".format(tempname))
         saver.save('{}_{}.gpflow'.format(tempname, data_name), m)
+
+    ##################################
+    # Make tests on a linear grid
+    ##################################
+    # Generate test data
+    date_lims = np.arange(cams.date.min(), cams.date.max())
+    lats = np.round(np.linspace(cams.lat.min(), cams.lat.max(), num = 50)[:, None], 1)
+    lons = np.round(np.linspace(cams.lon.min(), cams.lon.max(), num = 50)[:, None], 1) # To make out of prediction samples: np.arange(cams.date.max() + 1, cams.date.max() + 7)
+
+    # Get all combinations of lat/lon
+    coord_set = list(product(lats, lons))
+    coords = np.vstack([np.hstack((coord_set[i][0], coord_set[i][1])) for i in range(len(coord_set))])
+    
+    # Build a dates column
+    dates = np.repeat(date_lims, repeats=coords.shape[0])[:, None]
+    indicator = np.vstack((np.zeros_like(dates), np.ones_like(dates)))
+    coords_full = np.tile(coords, (date_lims.shape[0], 1))
+    test_data = np.hstack((np.tile(np.hstack((dates, coords_full)), (2, 1)), indicator))
+
+    results = pd.DataFrame(X_test)
+    results.columns = ['date', 'lat', 'lon', 'indicator']
+    results['mu'] = np.exp(mu)
+    results['var'] = var
+    # results['truth'] = np.exp(y_test[:, 0])
+    # results['sq_error'] = np.square(results['mu'] - results['truth'])
+    print(results.head())
+
+    fname = 'demos/corregionalised_gp_results_{}_sparse{}_linspace.csv'.format(data_name, n_sparse)
+    results.to_csv(fname, index=False)
     
   # results['sq_error'].groupby(results.indicator).describe()
