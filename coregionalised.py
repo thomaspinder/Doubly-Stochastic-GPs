@@ -19,6 +19,17 @@ print('Found GPU at: {}'.format(device_name))
 np.random.seed(123)
 tf.set_random_seed(123)
 
+def tester(X, gp, y=None):
+    mu, var = gp.predict_f(X)
+    results = pd.DataFrame(X_test)
+    results.columns = ['date', 'lat', 'lon', 'indicator']
+    results['mu'] = np.exp(mu)
+    results['var'] = var
+    if y:
+        results['truth'] = np.exp(y_test[:, 0])
+        results['sq_error'] = np.square(results['mu'] - results['truth'])
+    return results
+
 def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
 
@@ -137,7 +148,7 @@ if __name__ == "__main__":
     fname = 'demos/corregionalised_gp_results_{}_sparse{}.csv'.format(data_name, n_sparse)
     results.to_csv(fname, index=False)
 
-    saver= gpflow.saver.Saver()
+    saver = gpflow.saver.Saver()
     try:
         saver.save('coreg_model_{}_sparse{}.gpflow'.format(data_name, n_sparse), m)
     except ValueError:
@@ -163,6 +174,8 @@ if __name__ == "__main__":
     coords_full = np.tile(coords, (date_lims.shape[0], 1))
     test_data = np.hstack((np.tile(np.hstack((dates, coords_full)), (2, 1)), indicator))
 
+    mu, var = m.predict_f(test_data)
+
     results = pd.DataFrame(X_test)
     results.columns = ['date', 'lat', 'lon', 'indicator']
     results['mu'] = np.exp(mu)
@@ -175,3 +188,4 @@ if __name__ == "__main__":
     results.to_csv(fname, index=False)
     
   # results['sq_error'].groupby(results.indicator).describe()
+
