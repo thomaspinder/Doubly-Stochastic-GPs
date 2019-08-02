@@ -45,7 +45,7 @@ if __name__ == "__main__":
     aurn = aurn[['Date', 'Latitude', 'Longitude', 'pm25_value']]
     aurn.columns = ['date', 'lat', 'lon', 'val']
 
-    n_sparse = 150
+    n_sparse = 4000
     if n_sparse:
         zpoints = kmeans2(cams[['date', 'lat', 'lon']].values, n_sparse, minit='points')[0]
         zpoints = np.vstack((zpoints, aurn[['date', 'lat', 'lon']].values))
@@ -120,7 +120,7 @@ if __name__ == "__main__":
                             likelihood=liks,
                             num_latent=1)
 
-    gpflow.train.ScipyOptimizer().minimize(m, maxiter=1000)
+    gpflow.train.ScipyOptimizer().minimize(m, maxiter=100)
 
     """# Visualise the B Matrix"""
     B = k2.W.value @ k2.W.value.T + np.diag(k2.kappa.value)
@@ -176,7 +176,7 @@ if __name__ == "__main__":
 
     mu, var = m.predict_f(test_data)
 
-    results = pd.DataFrame(X_test)
+    results = pd.DataFrame(test_data)
     results.columns = ['date', 'lat', 'lon', 'indicator']
     results['mu'] = np.exp(mu)
     results['var'] = var
