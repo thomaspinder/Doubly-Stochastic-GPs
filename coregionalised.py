@@ -34,7 +34,7 @@ if __name__ == "__main__":
     aurn = aurn[['Date', 'Latitude', 'Longitude', 'pm25_value']]
     aurn.columns = ['date', 'lat', 'lon', 'val']
 
-    n_sparse = 350
+    n_sparse = 150
     if n_sparse:
         zpoints = kmeans2(cams[['date', 'lat', 'lon']].values, n_sparse, minit='points')[0]
         zpoints = np.vstack((zpoints, aurn[['date', 'lat', 'lon']].values))
