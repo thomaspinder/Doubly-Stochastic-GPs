@@ -67,10 +67,11 @@ if __name__ == "__main__":
     X_train, X_test, y_train, y_test = train_test_split(X_aug,
                                                         y_aug,
                                                         test_size=0.4,
-                                                        random_state=123)
+                                                        random_state=123,
+                                                        shuffle=True)
 
 
-           # Fit GP
+    # Fit GP
     output_dim = 2
 
     # Dimension of X, excluding the indicator column
