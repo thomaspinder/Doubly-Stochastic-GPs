@@ -1,0 +1,11 @@
+,class,prior,transform,trainable,shape,fixed_shape,value
+SGPR/kern/variance,Parameter,None,+ve,True,(),True,0.6352022863987813
+SGPR/kern/lengthscales,Parameter,None,+ve,True,"(2,)",True,[0.04774716 0.04106147]
+SGPR/likelihood/variance,Parameter,None,+ve,True,(),True,0.0005096709321370225
+SGPR/feature/Z,Parameter,None,(none),True,"(1000, 2)",True,"[[0.91820536 0.73448714]
+ [0.77112209 0.00198176]
+ [0.29899493 0.33306266]
+ ...
+ [0.21099674 0.3932538 ]
+ [0.90875806 0.59731525]
+ [0.76825385 0.84614635]]"
