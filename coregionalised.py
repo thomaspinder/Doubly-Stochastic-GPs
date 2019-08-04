@@ -39,13 +39,12 @@ if __name__ == "__main__":
     aurn = pd.read_csv('demos/coregional_data/aurn_{}.csv'.format(data_name))
     cams = pd.read_csv('demos/coregional_data/cams_{}.csv'.format(data_name)) # Get full CAMS data.
     cams = cams[['date', 'lat', 'lon', 'val']]
-    print(cams.date.drop_duplicates())
     mind = aurn.Date.drop_duplicates().tolist()[0]
 
     aurn = aurn[['Date', 'Latitude', 'Longitude', 'pm25_value']]
     aurn.columns = ['date', 'lat', 'lon', 'val']
 
-    n_sparse = 4000
+    n_sparse = 2000
     if n_sparse:
         zpoints = kmeans2(cams[['date', 'lat', 'lon']].values, n_sparse, minit='points')[0]
         zpoints = np.vstack((zpoints, aurn[['date', 'lat', 'lon']].values))
@@ -63,7 +62,6 @@ if __name__ == "__main__":
     # Check data dimensions
     # assert all_data.shape[0] == aurn.shape[0] + cams.shape[0], "Rows lost in concatenation"
     # assert all_data.shape[1] == aurn.shape[1] == cams.shape[1], "Column count mismatch in data"
-    all_data = all_data.head(n=int(all_data.shape[0]/2))
 
     print('{} observations loaded.'.format(all_data.shape[0]))
     print(all_data.head())
@@ -95,15 +93,15 @@ if __name__ == "__main__":
     rank = 1
 
     # Base Kernel
-    k1 = gpflow.kernels.RBF(input_dim=2, active_dims=[0, 1], ARD=True)
-    k3 = gpflow.kernels.RBF(input_dim = 1, active_dims =[2])
+    k1 = gpflow.kernels.RBF(input_dim=3, active_dims=[0, 1, 2], ARD=True)
+    # k3 = gpflow.kernels.RBF(input_dim = 1, active_dims =[2])
     # Coregeionalised kernel
     k2 = gpflow.kernels.Coregion(1, output_dim=output_dim, rank=rank, active_dims=[int(coreg_dim)])
 
     # Initialise W
     k2.W = np.random.randn(output_dim, rank)
     # Combine
-    kern = k1 * k3 * k2
+    kern = k1 * k2 # k3
 
     # Define Likelihoods
     liks = gpflow.likelihoods.SwitchedLikelihood(
@@ -121,6 +119,9 @@ if __name__ == "__main__":
                             num_latent=1)
 
     gpflow.train.ScipyOptimizer().minimize(m, maxiter=100)
+    
+    gp_params = m.as_pandas_table()
+    gp_params.to_csv('demos/coreg_{}_{}_gp_params.csv'.format(n_sparse, data_name))
 
     """# Visualise the B Matrix"""
     B = k2.W.value @ k2.W.value.T + np.diag(k2.kappa.value)
@@ -145,16 +146,16 @@ if __name__ == "__main__":
     print("RMSE on {} held out data points: {}".format(
         X_test.shape[0], np.sqrt(np.mean(results.sq_error))))
 
-    fname = 'demos/corregionalised_gp_results_{}_sparse{}.csv'.format(data_name, n_sparse)
+    fname = 'demos/corregionalised_nonsep_gp_results_{}_sparse{}.csv'.format(data_name, n_sparse)
     results.to_csv(fname, index=False)
 
     saver = gpflow.saver.Saver()
     try:
-        saver.save('coreg_model_{}_sparse{}.gpflow'.format(data_name, n_sparse), m)
+        saver.save('models/coreg_model_{}_sparse{}.gpflow'.format(data_name, n_sparse), m)
     except ValueError:
         tempname = id_generator()
         print("Filename coreg_model.gpflow already exists. \nSaving model as {}.gpflow".format(tempname))
-        saver.save('{}_{}.gpflow'.format(tempname, data_name), m)
+        saver.save('models/{}_{}.gpflow'.format(tempname, data_name), m)
 
     ##################################
     # Make tests on a linear grid
@@ -184,7 +185,7 @@ if __name__ == "__main__":
     # results['sq_error'] = np.square(results['mu'] - results['truth'])
     print(results.head())
 
-    fname = 'demos/corregionalised_gp_results_{}_sparse{}_linspace.csv'.format(data_name, n_sparse)
+    fname = 'demos/corregionalised_gp_nonsep_results_{}_sparse{}_linspace.csv'.format(data_name, n_sparse)
     results.to_csv(fname, index=False)
     
   # results['sq_error'].groupby(results.indicator).describe()
