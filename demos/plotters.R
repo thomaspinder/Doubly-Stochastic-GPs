@@ -16,6 +16,24 @@ plot_linspaces <- function(df, title, dlims, ylims, xlims){
   return(predictions)
 }
 
+plot_var_linspaces <- function(df, title, dlims, ylims, xlims){
+  UK <- map_data(map = "world", region = "UK") 
+  predictions <- df %>% 
+    dplyr::filter(date > dlims[1] & date < dlims[2]) %>% 
+    ggplot(aes(x = lon, y = lat)) + 
+    geom_point(aes(colour=var), alpha=0.5, size=8) + 
+    scale_color_gradient(low = "white", high = "red") +
+    labs(x='Longitude', y='Latitude', colour= 'PM2.5 Levels', title=title) +
+    ylim(ylims[1], ylims[2]) +
+    xlim(xlims[1], xlims[2]) +
+    facet_wrap(.~date) +
+    geom_polygon(data = UK, aes(x = long, y = lat, group = group), fill = NA, color = "black") +
+    coord_map() +
+    theme_bw() %+replace% 
+    theme(plot.margin=grid::unit(c(0,0,0,0), "mm"))
+  return(predictions)
+}
+
 plot_spatial_linspaces <- function(df, title, ylims, xlims){
   UK <- map_data(map = "world", region = "UK") 
   predictions <- df %>% 
