@@ -1,0 +1,95 @@
+pod_id_location,start_date_UTC,end_date_UTC,scaling_method,relocate_date_UTC,location_name,Borough,Type,ULEZ,Latitude,Longitude,X_Coord,Y_Coord,Distance_from_Road,Height
+2245,5/5/2019 1:00,1/7/2019 0:59,Network Based Calibration,NA,Great Ormond St Hospital,Camden,Urban ,Yes,51.52188,-0.120434,530494.1779,182004.8221,2.56,2.8
+3245,4/10/2018 18:00,1/7/2019 0:59,Gold Pod Colocation,NA,Savernake Road,Camden,Urban ,No,51.55548488,-0.152338545,528191.7243,185682.9589,5,2.297
+4245,19/2/2019 15:00,1/7/2019 0:59,Gold Pod Colocation,NA,Wandsworth Road,Lambeth,Roadside,No,51.475735,-0.131209,529882.9363,176851.695,0.5,3.12
+5245,26/11/2018 10:00,1/7/2019 0:59,Network Based Calibration,NA,Garrett Lane,Wandsworth,Urban ,No,51.440399,-0.186775,526121.5099,172825.1952,2.656,3.445
+6245,11/1/2019 14:45,1/7/2019 0:59,Network Based Calibration,NA,Hanworth Road,Hounslow,Roadside,No,51.468625,-0.35977,514028.3706,175680.7242,1.24,3.2
+7245,20/9/2018 13:00,1/7/2019 0:59,Network Based Calibration,NA,Greenwich Church Street,Greenwich,Roadside,No,51.4813,-0.00986,538292.9361,177692.5864,0.5,3
+8245,11/3/2019 15:00,1/7/2019 0:59,Network Based Calibration,NA,Geraldine Street,Southwark,Urban ,Yes,51.49562,-0.105412,531617.1416,179108.998,2.1,2.225
+9245,4/4/2019 7:00,1/7/2019 0:59,Gold Pod Colocation,NA,Whitehall,Westminster,Roadside,Yes,51.504566,-0.126167,530151.0071,180066.7404,1.2,2.9
+10245,9/4/2019 15:00,1/7/2019 0:59,Gold Pod Colocation,NA,Borough High Street,Southwark,Urban ,Yes,51.506131,-0.088654,532749.8408,180308.0896,3,7.5
+11245,5/4/2019 3:00,1/7/2019 0:59,Network Based Calibration,NA,Cadogan Gardens,Kensington & Chelsea,Urban ,No,51.493217,-0.158772,527919.9752,178747.2644,2.304,1.762
+13245,18/10/2018 13:00,1/7/2019 0:59,Network Based Calibration,NA,Hunslett Street,Tower Hamlets,Roadside,No,51.529308,-0.048721,535452.3321,182958.5548,2,2
+15245,25/10/2018 7:00,1/7/2019 0:59,Initial Reference Site Colocation,NA,Caledonian Road,Islington,Roadside,No,51.550067,-0.117987,530588.5503,185141.1824,2.35,3.1
+16245,8/3/2019 14:00,1/7/2019 0:59,Network Based Calibration,NA,Kensington Church Walk,Kensington & Chelsea,Urban ,No,51.501862,-0.19241,525561.1801,179650.4321,9,1.525
+17245,11/4/2019 13:00,1/7/2019 0:59,Network Based Calibration,NA,Holloway Road,Islington,Roadside,No,51.555387,-0.116092,530704.6937,185736.17,2,2.5
+18245,8/3/2019 12:15,1/7/2019 0:59,Network Based Calibration,NA,London Road,Kingston,Roadside,No,51.410714,-0.296626,518563.8152,169340.8706,0.89,3.25
+19245,28/9/2018 16:00,1/7/2019 0:59,Network Based Calibration,NA,Mansford Street,Tower Hamlets,Urban ,No,51.528757,-0.061823,534545.1839,182873.1272,2,4
+20245,5/4/2019 1:00,1/7/2019 0:59,Gold Pod Colocation,NA,Albert Street,Camden,Urban ,No,51.536271,-0.143525,528856.9241,183561.7628,3.626,3.658
+21245,18/10/2018 13:00,1/7/2019 0:59,Initial Reference Site Colocation,NA,Wood Lane,Barking & Dagenham,Roadside,No,51.561372,0.148582,549032.5815,186907.5045,0.5,3
+22245,2/10/2018 12:00,1/7/2019 0:59,Initial Reference Site Colocation,NA,Blackfriars Road,Southwark,Roadside,Yes,51.505529,-0.104345,531662.6681,180212.8259,0.47,2.457
+25245,27/9/2018 9:00,1/7/2019 0:59,Gold Pod Colocation,NA,Laystall St,Camden,Roadside,Yes,51.522514,-0.112014,531081.7288,182087.8582,1,3
+27245,1/4/2019 15:15,1/7/2019 0:59,Network Based Calibration,NA,St Anns Hill,Wandsworth,Roadside,No,51.456143,-0.18927,525904.8363,174571.6912,4.2,2.145
+28245,30/10/2018 12:00,1/7/2019 0:59,Network Based Calibration,NA,Markfield Road,Haringey,Roadside,No,51.583916,-0.064269,534213.1826,189002.5014,1.12,3.24
+29245,11/1/2019 15:00,1/7/2019 0:59,Network Based Calibration,NA,Crowthorne Road,Kensington & Chelsea,Urban ,No,51.516554,-0.218503,523710.4458,181239.8547,0.9144,3.353
+30245,15/3/2019 11:00,1/7/2019 0:59,Gold Pod Colocation,NA,Stockwell Road,Lambeth,Urban ,No,51.46670603,-0.117473459,530862.59,175872.0829,5,2.286
+31245,11/10/2018 16:00,1/7/2019 0:59,Gold Pod Colocation,NA,Tower Bridge Road,Southwark,Urban ,Yes,51.501965,-0.077592,533529.6756,179864.9246,3.345,2.945
+32245,1/11/2018 9:00,1/7/2019 0:59,Network Based Calibration,NA,Southbury Road,Enfield,Roadside,No,51.649088,-0.054961,534665.1278,196267.0177,1.1,3.1
+33245,5/4/2019 1:00,1/7/2019 0:59,Network Based Calibration,NA,Churchill Gardens Road,Westminster,Urban ,No,51.486223,-0.14503,528893.6104,177993.5899,10.5,19.5
+34245,16/10/2018 15:00,1/7/2019 0:59,Network Based Calibration,NA,Haimo Road,Greenwich,Urban ,No,51.455253,0.040655,541881.0929,174892.7056,5,2
+35245,18/10/2018 13:00,1/7/2019 0:59,Gold Pod Colocation,NA,Triangle Adventure Playground,Lambeth,Urban ,No,51.481924,-0.115556,530952.2198,177567.7874,6,2.35
+36245,13/12/2018 15:00,1/7/2019 0:59,Network Based Calibration,NA,Black Horse Court,Southwark,Roadside,Yes,51.496482,-0.088226,532807.5678,179235.8698,0.36,3.1
+37245,12/10/2018 12:00,1/7/2019 0:59,Initial Reference Site Colocation,NA,Station Parade,Barking & Dagenham,Urban ,No,51.539063,0.080874,544410.2627,184291.0103,3.567,3.114
+38245,11/10/2018 12:00,1/7/2019 0:59,Initial Reference Site Colocation,NA,Chigwell Road,Redbridge,Roadside,No,51.595229,0.038207,541277.4165,190453.4788,6,3.023
+39245,22/5/2019 17:00,1/7/2019 0:59,Initial Reference Site Colocation,NA,Hendon Street,Greenwich,Urban ,No,51.495027,0.010292,539639.5839,179256.3007,NA,3
+40245,2/3/2019 14:45,1/7/2019 0:59,Gold Pod Colocation,NA,Queen Margarets Grove,Islington,Urban ,No,51.549215,-0.079761,533241.2495,185115.3176,5.767,2.305
+41245,10/10/2018 17:00,1/7/2019 0:59,Initial Reference Site Colocation,NA,Fulham Palace Road,Hammersmith & Fulham,Urban ,No,51.486377,-0.220843,523629.656,177880.083,5.7,2.562
+42245,12/2/2019 13:00,1/7/2019 0:59,Network Based Calibration,NA,Romford Road,Newham,Roadside,No,51.554615,0.058982,542843.475,185977.4562,0.54,3.3
+43245,12/10/2018 12:00,1/7/2019 0:59,Initial Reference Site Colocation,NA,Durham Street,Lambeth,Urban ,Yes,51.485597,-0.11909,530696.3473,177969.9261,8.556,3.011
+44245,17/4/2019 15:59,1/7/2019 0:59,Network Based Calibration,NA,St Bartholomews Hospital,City of London,Roadside,Yes,51.518921,-0.100905,531862.7524,181708.2469,1.5,3.012
+45245,23/2/2019 12:30,1/7/2019 0:59,Network Based Calibration,NA,Ladbroke Grove,Kensington & Chelsea,Roadside,No,51.510768,-0.20529,524642.9691,180618.8233,0.4,5.87
+46245,26/10/2018 12:00,1/7/2019 0:59,Network Based Calibration,NA,Exhibition Road,Kensington & Chelsea,Roadside,No,51.495475,-0.173573,526886.2674,178972.6253,3.1,6.1
+47245,11/10/2018 13:00,1/7/2019 0:59,Initial Reference Site Colocation,NA,Whitecross,Islington,Urban ,Yes,51.521451,-0.092771,532419.7357,182004.2672,12.45,3.126
+48245,19/10/2018 12:00,1/7/2019 0:59,Gold Pod Colocation,NA,Peckham Road,Southwark,Urban ,No,51.474326,-0.078151,533571.5641,176790.3826,5.22,2.9
+50245,17/10/2018 17:00,1/7/2019 0:59,Initial Reference Site Colocation,NA,Richmond Road,Richmond,Roadside,No,51.447883,-0.326007,516426.1275,173427.1647,4.67,5.21
+51245,8/3/2019 14:45,1/7/2019 0:59,Network Based Calibration,NA,Lancell Street,Hackney,Urban ,No,51.5618,-0.07587,533474.2002,186521.9029,22.246,2.943
+52245,8/12/2018 9:15,1/7/2019 0:59,Network Based Calibration,NA,Dagnall Street,Wandsworth,Urban ,No,51.4738,-0.157493,528063.0973,176590.2608,36.7,3.75
+52450,9/10/2018 19:00,26/11/2018 1:00,Network Based Calibration,11/26/2018 1:00,Steerforth Street,Wandsworth,Urban ,No,51.438489,-0.187703,526062.2702,172611.2015,2.656,3.445
+53245,17/10/2018 11:00,1/7/2019 0:59,Gold Pod Colocation,NA,Devas Street,Tower Hamlets,Urban ,No,51.523099,-0.012704,537969.2618,182335.3409,5,2
+54245,10/10/2018 12:00,1/7/2019 0:59,Gold Pod Colocation,NA,Holloway Bus Garage,Islington,Urban ,No,51.561917,-0.132947,529517.7305,186432.3744,2.154,2.581
+55245,17/12/2018 12:00,1/7/2019 0:59,Network Based Calibration,NA,Upper Richmond Road,Richmond,Roadside,No,51.465116,-0.254736,521323.7361,175460.9676,2.345,3
+56245,17/10/2018 13:00,1/7/2019 0:59,Network Based Calibration,NA,The Vale,Ealing,Urban ,No,51.506679,-0.262782,520664.3321,180067.8476,5,3.5
+57245,18/10/2018 17:00,1/7/2019 0:59,Network Based Calibration,NA,Lollard Street,Lambeth,Urban ,Yes,51.492714,-0.114098,531022.5457,178770.2733,10,2
+58245,19/10/2018 12:00,1/7/2019 0:59,Initial Reference Site Colocation,NA,Woolwich Road,Bexley,Roadside,No,51.481228,0.126787,547781.004,177951.3484,1,4.5
+59245,19/10/2018 12:00,1/7/2019 0:59,Gold Pod Colocation,NA,Drury Lane,Westminster,Urban ,Yes,51.513472,-0.119223,530607.467,181069.4777,7,3
+60245,19/10/2018 12:00,1/7/2019 0:59,Initial Reference Site Colocation,NA,Camberwell Road,Southwark,Roadside,No,51.475739,-0.093557,532497.6013,176919.5439,0.78,3.1
+61245,16/3/2019 0:00,1/7/2019 0:59,Network Based Calibration,NA,High Road,Brent,Roadside,No,51.551997,-0.299651,517988.605,185047.4078,0.5,3
+63245,15/10/2018 18:00,1/7/2019 0:59,Network Based Calibration,NA,Oakdale Road,Redbridge,Urban ,No,51.592485,0.033284,540944.9368,190138.8431,1.524,2.965
+64245,22/12/2018 13:00,1/7/2019 0:59,Network Based Calibration,NA,Morpeth Street,Tower Hamlets,Urban ,No,51.527588,-0.047295,535556.3458,182769.925,1,2
+65245,22/1/2019 12:00,1/7/2019 0:59,Network Based Calibration,NA,Edgware Road,Westminster,Roadside,No,51.51419,-0.161979,527630.9987,181079.4675,3.5,3.1
+66245,16/10/2018 14:00,1/7/2019 0:59,Network Based Calibration,NA,Columbia Road,Tower Hamlets,Urban ,No,51.528491,-0.074268,533682.7495,182820.7544,15.675,2.6
+67245,17/4/2019 15:59,1/7/2019 0:59,Network Based Calibration,NA,Wyndham Road,Ealing,Urban ,No,51.50061,-0.320726,516658.6329,179299.094,NA,2.866
+68245,2/11/2018 0:00,1/7/2019 0:59,Network Based Calibration,NA,Blomfontein Road,Hammersmith & Fulham,Roadside,No,51.514071,-0.235418,522543.5037,180935.3,0.25,5.9
+69245,18/10/2018 15:00,1/7/2019 0:59,Network Based Calibration,NA,Devonshire Street,Hounslow,Urban ,No,51.488199,-0.255688,521205.6051,178024.4867,22.7,2.126
+70245,22/12/2018 12:45,1/7/2019 0:59,Network Based Calibration,NA,St James,Lewisham,Urban ,No,51.474143,-0.038547,536322.4045,176842.9629,7.66,2.13
+71245,16/10/2018 15:00,1/7/2019 0:59,Network Based Calibration,NA,Beaumont Grove,Tower Hamlets,Urban ,No,51.521004,-0.046559,535626.9439,182039.1302,NA,2.767
+72245,13/2/2019 12:00,1/7/2019 0:59,Network Based Calibration,NA,Marylebone,Westminster,Roadside,Yes,51.52304,-0.174732,526729.3718,182035.9607,0.5,3
+73245,24/10/2018 19:00,1/7/2019 0:59,Network Based Calibration,NA,Kew Road,Richmond,Roadside,No,51.46394,-0.301597,518080.9088,175251.8234,1.335,3.03
+74245,23/10/2018 11:00,1/7/2019 0:59,Network Based Calibration,NA,Greenhill Way,Harrow,Roadside,No,51.58092,-0.341502,515014.1783,188197.2458,0.367,3.166
+75245,24/10/2018 13:00,1/7/2019 0:59,Network Based Calibration,NA,Robin Hood Health Centre,Sutton,Urban ,No,51.362842,-0.196908,525629.4403,164183.2753,1.5,2.9
+76245,24/10/2018 15:00,1/7/2019 0:59,Network Based Calibration,NA,Roehampton Lane,Wandsworth,Roadside,No,51.455096,-0.243402,522146.8672,174363.6798,1.76,3.3
+77245,13/3/2019 11:30,1/7/2019 0:59,Gold Pod Colocation,NA,Cornwall Road,Lambeth,Roadside,Yes,51.506643,-0.112107,531120.8062,180322.7835,1,3
+78245,24/10/2018 16:00,1/7/2019 0:59,Initial Reference Site Colocation,NA,Cecilia Road,Hackney,Roadside,No,51.54989,-0.06836,534024.8922,185210.2268,1.5,3.5
+80245,29/11/2018 10:00,1/7/2019 0:59,Network Based Calibration,NA,Ballance Road,Hackney,Roadside,No,51.5456,-0.03614,536277.9125,184802.9533,0.3,3.3
+82245,2/11/2018 0:00,1/7/2019 0:59,Initial Reference Site Colocation,NA,Haverstock Hill,Camden,Roadside,No,51.549012,-0.162351,527515.721,184945.6583,1.3,3.2
+83245,2/5/2019 13:00,1/7/2019 0:59,Network Based Calibration,NA,Brook Drive,Southwark,Urban ,Yes,51.493213,-0.101559,531891.5312,178848.2618,20,2.5
+84245,19/10/2018 8:00,1/7/2019 0:59,Network Based Calibration,NA,Cowcross Street,Islington,Urban ,Yes,51.52011,-0.103411,531685.4655,181835.9587,3.66,13.7
+85245,24/4/2019 14:00,1/7/2019 0:59,Network Based Calibration,NA,Bank Junction,City of London,Roadside,Yes,51.513206,-0.088786,532720.135,181094.611,0.45,3.18
+86245,1/3/2019 11:15,1/7/2019 0:59,Gold Pod Colocation,NA,Commercial Street,Tower Hamlets,Urban ,Yes,51.518123,-0.074271,533712.8842,181667.7969,0.3,3.1
+88245,6/11/2018 12:45,1/7/2019 0:59,Gold Pod Colocation,NA,London Wall,City of London,Roadside,Yes,51.516749,-0.085342,532948.7925,181494.8494,0.34,3.03
+89245,22/1/2019 13:00,1/7/2019 0:59,Gold Pod Colocation,NA,Park Lane,Westminster,Roadside,Yes,51.507988,-0.153446,528244.8324,180397.0927,1.3,3.3
+90245,2/3/2019 10:45,1/7/2019 0:59,Network Based Calibration,NA,Broadway Street,Bexley,Roadside,No,51.45788,0.135353,548445.8555,175376.9022,1,3.5
+92245,23/10/2018 9:00,1/7/2019 0:59,Network Based Calibration,NA,High Street,Hillingdon,Roadside,No,51.574253,-0.143871,510038.5891,187345.0653,2.33,7.122
+96245,17/4/2019 15:59,1/7/2019 0:59,Gold Pod Colocation,NA,Rosebery Avenue,Islington,Roadside,Yes,51.52844,-0.10692,531413.6014,182749.243,0.3,3.23
+98245,4/3/2019 12:00,1/7/2019 0:59,Network Based Calibration,NA,Hertford Road,Enfield,Roadside,No,51.673753,-0.038301,535743.972,199040.7032,0.23,3.19
+100245,15/10/2018 21:00,1/7/2019 0:59,Network Based Calibration,NA,National Physical Laboratory,Richmond,Urban ,No,51.42661,-0.345043,515153.3052,171035.5917,4,3
+172450,28/2/2019 0:00,10/4/2019 2:00,Network Based Calibration,4/10/2019 2:00,Clifford Street,Westminster,Urban ,Yes,51.51092,-0.141896,529041.4826,180745.5001,2,20
+392450,24/10/2018 11:00,8/3/2019 1:00,Initial Reference Site Colocation,3/8/2019 1:00,Glaisher Street,Greenwich,Urban ,No,51.4831,-0.0188,537666.7807,177875.9136,1.5,3.03
+422450,24/10/2018 13:00,6/2/2019 1:00,Network Based Calibration,2/6/2019 1:00,Parkside,Merton,Roadside,No,51.426126,-0.222013,523711.065,171177.9655,1.26,2.93
+552450,17/10/2018 14:00,17/12/2018 1:00,Network Based Calibration,12/17/2018 1:00,Wetland Centre,Hammersmith & Fulham,Urban ,No,51.476168,-0.230427,522991.6947,176728.6714,NA,3.133
+652450,16/12/2018 17:00,8/1/2019 1:00,Network Based Calibration,1/8/2019 1:00,Broomhill Road,Bromley,Urban ,No,51.379382,0.100759,546298.5553,166574.025,14.4,3
+722450,2/11/2018 0:00,13/2/2019 1:00,Network Based Calibration,2/13/2019 1:00,Fitzjohn Avenue,Camden,Roadside,No,51.551247,-0.175939,526567.4357,185170.6219,1.1,3.3
+832450,14/12/2018 13:15,18/4/2019 2:00,Network Based Calibration,4/18/2019 2:00,Richmond Road,Hackney,Roadside,No,51.54337,-0.057899,534763.2278,184508.8304,1.12,3.1
+872450,11/3/2019 15:30,20/5/2019 2:00,Network Based Calibration,5/20/2019 2:00,Haseltine Road,Lewisham,Roadside,No,51.42796,-0.036516,536593.7423,171717.1286,1,2.9
+892450,25/10/2018 13:00,3/1/2019 1:00,Gold Pod Colocation,1/3/2019 1:00,Woolwich Manor Way,Barking & Dagenham,Roadside,No,51.515901,0.060587,543075.9963,181675.5508,0.1,3.3
+982450,20/9/2018 11:00,8/1/2019 1:00,Network Based Calibration,1/8/2019 1:00,King William Walk,Greenwich,Roadside,No,51.481858,-0.008609,538378.11,177756.9986,1.5,3
